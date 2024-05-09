@@ -1,30 +1,17 @@
 import React from "react";
-import ListadoLibros from "./componentes/ListadoLibros.jsx";
 import "./App.css";
+import Cabecera from "./componentes/estructura/Cabecera.jsx";
+import Navegacion from "./componentes/estructura/Navegacion.jsx";
+import Contenido from "./componentes/estructura/Contenido.jsx";
+import PiePagina from "./componentes/estructura/PiePagina.jsx";
 
 const App = () => {
   return (
     <>
-      <header>
-        <div>Mi biblioteca hola</div>
-      </header>
-      <nav>
-        <div>Esta es la barra de navegación.</div>
-      </nav>
-      <main>
-        <section>
-          <div>Contenido de la web.</div>
-          <div>
-            <ListadoLibros />
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div>
-          Curso 24AI32CF029 - Programación reactiva para aplicaciones Web
-          (REACT)
-        </div>
-      </footer>
+      <Cabecera />
+      <Navegacion />
+      <Contenido />
+      <PiePagina />
     </>
   );
 };

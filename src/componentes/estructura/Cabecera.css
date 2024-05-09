@@ -1,0 +1,13 @@
+.cabecera {
+    padding: 50px 0px 20px;
+    width: var(--default-size);
+    margin: 0 auto;
+}
+
+.cabecera__titulo {
+    font-size: 3rem;
+}
+
+
+
+

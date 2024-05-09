@@ -1,0 +1,29 @@
+.libro__contenido {
+    padding: 10px;
+    width: 150px;
+}
+
+.libro__titulo {
+    margin: 5px 0;
+    max-width: 150px;
+}
+
+.libro__autor {
+    font-weight: bold;
+}
+
+.libro__link {
+    color: var(--primary-color);
+    transition: background-color 0.3s ease;
+}
+
+.libro__link:hover {
+    background-color: var(--primary-color);
+    color: var(--menu-color);
+    border: solid 5px var(--primary-color);  ;
+} 
+
+.libro__link--activo {
+    background-color: var(--primary-color);
+    color: var(--menu-color);
+}
