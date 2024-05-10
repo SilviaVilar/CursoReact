@@ -4,8 +4,8 @@ import "./Cabecera.css";
 const Cabecera = () => {
   return (
     <Fragment>
-      <header className='cabecera'>
-        <h1 className='cabecera__titulo'>Mi biblioteca</h1>
+      <header className="header">
+        <h1 className="header__title">Mi biblioteca</h1>
       </header>
     </Fragment>
   );

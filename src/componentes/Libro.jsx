@@ -3,6 +3,7 @@ import sin_portada from "../assets/img/sin_portada.png";
 import "./Libro.css";
 
 const Libro = (props) => {
+  // Se utiliza la desestructuración de objetos.
   const { portada, titulo, autor, id } = props.datos;
 
   return (
@@ -10,9 +11,8 @@ const Libro = (props) => {
       <article id={id ? id : crypto.randomUUID()} className='libro__contenido'>
         <img
           className='libro__portada'
-          width='150px'
-          height='225px'
           src={portada ? portada : sin_portada}
+          width='150'
         ></img>
         <div className='libro__titulo'>
           {titulo ? titulo : "No se ha especificado título."}

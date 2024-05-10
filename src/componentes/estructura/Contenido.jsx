@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
-import ListadoLibros from "../ListadoLibros.jsx";
 import "./Contenido.css";
+import Rutas from "./Rutas.jsx";
 
 const Contenido = () => {
   return (
     <Fragment>
-      <main className='main'>
-        <ListadoLibros />
+      <main className="main">
+        <Rutas />
       </main>
     </Fragment>
   );

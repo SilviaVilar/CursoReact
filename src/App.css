@@ -36,11 +36,11 @@ body {
   background-color: var(--secondary-color);
 }
 
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
-a { text-decoration: none; }
-a:hover { text-decoration: none; }

@@ -1,17 +1,6 @@
 .libro__contenido {
     padding: 10px;
     width: 150px;
-    margin: 15px 0;
-    color: var(--primary-color);
-    height: fit-content;
-    position: relative;
-}
-
-.libro__contenido:hover {
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    display: block;
 }
 
 .libro__titulo {
