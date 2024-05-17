@@ -4,14 +4,17 @@ import Navegacion from "./componentes/estructura/Navegacion.jsx";
 import Contenido from "./componentes/estructura/Contenido.jsx";
 import PiePagina from "./componentes/estructura/PiePagina.jsx";
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   return (
     <>
-      <Cabecera />
-      <Navegacion />
-      <Contenido />
-      <PiePagina />
+      <BrowserRouter>
+        <Cabecera />
+        <Navegacion />
+        <Contenido />
+        <PiePagina />
+      </BrowserRouter>
     </>
   );
 };

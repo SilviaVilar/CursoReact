@@ -1,6 +1,12 @@
 import React, { Fragment } from "react";
 import "./LibroDetalles.css";
 import sin_portada from "../assets/img/sin_portada.png";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleCheck,
+  faCircleXmark,
+} from "@fortawesome/free-regular-svg-icons";
 
 const LibroDetalles = (props) => {
   const { titulo, autor, portada, completado, sinopsis } = props.libroBuscado;
@@ -15,7 +21,19 @@ const LibroDetalles = (props) => {
         ></img>
         <div className='libro-detalle__info'>
           <div>
-            {completado ? "Leído." : "No leído."}
+            {completado
+              ? <FontAwesomeIcon
+                title='Leído'
+                icon={faCircleCheck}
+                className='libro-detalle__completado libro-detalle__completado--true'
+                size='2x'
+              />
+              : <FontAwesomeIcon
+                title='No leído'
+                icon={faCircleXmark}
+                className='libro-detalle__completado libro-detalle__completado--false'
+                size='2x'
+              />}
             <span className='libro-detalle__titulo'>
               {titulo ? titulo : "No se ha especificado título."}
             </span>
@@ -26,6 +44,14 @@ const LibroDetalles = (props) => {
           <div className='libro-detalle__sinopsis'>
             {sinopsis ? sinopsis : "No se ha especificado sinopsis."}
           </div>
+          <Link to={'/rutainexistente'}>
+            <input type='button' value='Eliminar de la biblioteca' className='boton boton--cancelar'
+            />
+          </Link>
+          <Link to={'/'}>
+            <input type='button' value='&lt; Atrás' className='boton boton--volver'
+            />
+          </Link>
         </div>
       </article>
     </Fragment>
