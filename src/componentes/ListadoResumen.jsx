@@ -3,14 +3,10 @@ import './ListadoResumen.css'
 
 const ListadoResumen = (biblioteca) => {
 
-    console.log(biblioteca);
-    console.log(biblioteca.biblioteca);
-    console.log(biblioteca.biblioteca.length);
-
-    const [cantidad=0, setCantidad] = useState([]);
+    const [cantidad = 0, setCantidad] = useState([]);
 
     const contarLibros = () => {
-      setCantidad(biblioteca.biblioteca.length);   
+        setCantidad(biblioteca.biblioteca.length);
     }
 
     useEffect(() => {
@@ -20,7 +16,7 @@ const ListadoResumen = (biblioteca) => {
 
     return (
 
-        <div>{/*Aquí va la cantidad de libros*/}
+        <div className="muestra_cantidad">{/*Aquí va la cantidad de libros*/}
             La biblioteca contiene {cantidad ? ` ${cantidad} libro(s).` : ' cero libros.'}
         </div>
     );

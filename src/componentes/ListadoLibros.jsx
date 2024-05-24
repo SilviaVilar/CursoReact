@@ -30,9 +30,6 @@ const ListadoLibros = () => {
 
   const insertarLibro = (libroAInsertar) => {
 
-    console.log(biblioteca);
-    console.log(libroAInsertar);
-    console.log([...biblioteca, libroAInsertar]);
     setBiblioteca([...biblioteca, libroAInsertar]);
     //no funciona así el añadir el elemento al array
     console.log(biblioteca);
