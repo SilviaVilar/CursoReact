@@ -12,7 +12,7 @@ const Rutas = () => {
       <Routes>
         <Route path='/' element={<Inicio />} />
         <Route path='/crear' element={<Crear />} />
-        <Route path='/mostrar' element={<Mostrar />} />
+        <Route path='/mostrar/:identificador' element={<Mostrar />} />
         <Route path='/buscar' element={<Buscar />} />
         <Route path='*' element={<Error />} />
       </Routes>

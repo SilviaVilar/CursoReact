@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import "./LibroDetalles.css";
 import sin_portada from "../assets/img/sin_portada.png";
 import { Link } from "react-router-dom";
@@ -7,9 +7,16 @@ import {
   faCircleCheck,
   faCircleXmark,
 } from "@fortawesome/free-regular-svg-icons";
+import { contextoBiblioteca } from "../contextos/ProveedorLibros.jsx";
+import { useNavigate } from "react-router-dom";
 
 const LibroDetalles = (props) => {
-  const { titulo, autor, portada, completado, sinopsis } = props.libroBuscado;
+  const { borrarLibro, libroBorrado, setlibroBorrado } = useContext(contextoBiblioteca);
+
+  const { id, titulo, autor, portada, completado, sinopsis } = props.libroBuscado;
+
+  const navegar = useNavigate();
+
   return (
     <Fragment>
       <article className='libro-detalle'>
@@ -45,13 +52,21 @@ const LibroDetalles = (props) => {
           <div className='libro-detalle__sinopsis'>
             {sinopsis ? sinopsis : "No se ha especificado sinopsis."}
           </div>
-          <Link to='/rutaInexistente'>
-            <input
-              type='button'
-              value='Eliminar de la biblioteca'
-              className='boton boton--cancelar'
-            />
-          </Link>
+          {/* botón para eliminar libro */}
+          <input
+            type='button'
+            value='Eliminar de la biblioteca'
+            className='boton boton--cancelar'
+            onClick={(evento) => {
+              confirm(`¿Desea eliminar ${titulo ? titulo : "Sin título"} de la biblioteca?`)
+                && borrarLibro(id);
+              {setlibroBorrado(props.libroBuscado);
+              setTimeout(() => {
+                navegar('/');
+              }, 2000);}
+            }}
+          />
+
           <Link to='/'>
             <input
               type='button'

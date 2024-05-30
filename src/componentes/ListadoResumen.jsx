@@ -1,11 +1,17 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
+import "./ListadoResumen.css";
+import { contextoBiblioteca } from "../contextos/ProveedorLibros";
 
-const ListadoResumen = ({ elementos }) => {
+const ListadoResumen = () => {
+
+  //Obtenemos la cantidad de libros del contexto
+  const { cantidad } = useContext(contextoBiblioteca);
+
   return (
     <Fragment>
       <div className='listadoResumen'>
         La biblioteca contiene
-        {elementos ? ` ${elementos} libro(s).` : " cero libros."}
+        {cantidad ? ` ${cantidad} libro(s).` : " cero libros."}
       </div>
     </Fragment>
   );
