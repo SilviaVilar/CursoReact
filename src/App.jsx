@@ -4,6 +4,7 @@ import Cabecera from "./componentes/estructura/Cabecera.jsx";
 import Navegacion from "./componentes/estructura/Navegacion.jsx";
 import Contenido from "./componentes/estructura/Contenido.jsx";
 import PiePagina from "./componentes/estructura/PiePagina.jsx";
+import ProveedorLibros from "./contextos/ProveedorLibros.jsx";
 import "./App.css";
 
 const App = () => {
@@ -12,7 +13,9 @@ const App = () => {
       <BrowserRouter>
         <Cabecera />
         <Navegacion />
-        <Contenido />
+        <ProveedorLibros>
+          <Contenido />
+        </ProveedorLibros>
         <PiePagina />
       </BrowserRouter>
     </>
