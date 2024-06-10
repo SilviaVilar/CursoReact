@@ -5,7 +5,7 @@ const Buscar = () => {
   return (
     <Fragment>
       <section className='buscar'>
-        <h2 className='buscar__titulo'>Buscar libro</h2>
+        <h2 className='buscar__titulo'>Buscar libros</h2>
       </section>
     </Fragment>
   );

@@ -32,6 +32,7 @@ const ProveedorLibros = (props) => {
   const insertarLibro = (libroAInsertar) => {
     // Se utiliza el spread operator para añadir el libro al estado "biblioteca".
     setBiblioteca([...biblioteca, libroAInsertar]);
+    navegar("/");
   };
 
   const buscarLibro = (identificador) => {

@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect, useContext } from "react";
+import "./ListadoResumen.css";
 import { contextoBiblioteca } from "../contextos/ProveedorLibros.jsx";
 
 const ListadoResumen = () => {
