@@ -18,7 +18,7 @@
 
 .form__item--boton {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .form__label {
@@ -80,6 +80,11 @@
 .boton--volver {
     background-color: var(--primary-color);
 }
+
+.boton--limpiar {
+    background-color: var(--primary-color);
+}
+
 
 
 /* Media queries */
