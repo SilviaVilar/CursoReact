@@ -55,6 +55,14 @@ const ProveedorLibros = (props) => {
     inicializarBiblioteca();
   }, []);
 
+  //para la búisqueda de libros
+  const adecuarURL = (url) => {
+    return `https://openlibrary.org/search.json?q=${url
+        .trim().replace(/\s/g, "+")
+    }&fields=key,title,author_name,cover_i,language,first_sentence,number_of_pages_median&language=spa`;
+};
+
+
   const exportacion = {
     biblioteca,
     inicializarBiblioteca,
@@ -63,6 +71,7 @@ const ProveedorLibros = (props) => {
     insertarLibro,
     buscarLibro,
     borrarLibro,
+    adecuarURL,
   };
   return (
     <Fragment>
