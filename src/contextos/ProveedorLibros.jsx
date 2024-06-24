@@ -50,6 +50,15 @@ const ProveedorLibros = (props) => {
     navegar("/");
   };
 
+  const adecuarURL = (url) => {
+    return `https://openlibrary.org/search.json?q=${url
+      .trim()
+      .replace(
+        /\s/g,
+        "+"
+      )}&fields=key,title,author_name,cover_i,language,first_sentence,number_of_pages_median&language=spa`;
+  };
+
   // Efectos del contexto (se carga la información al inicio).
   useEffect(() => {
     inicializarBiblioteca();
@@ -63,6 +72,7 @@ const ProveedorLibros = (props) => {
     insertarLibro,
     buscarLibro,
     borrarLibro,
+    adecuarURL,
   };
   return (
     <Fragment>
